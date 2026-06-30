@@ -8,7 +8,7 @@ import {
   expect,
   it,
 } from 'vitest';
-import { buildApplicationApp } from '@/server';
+import { buildApplicationApp } from '@/app';
 import { clearDatabase } from '../../setup';
 
 describe('CreateUserController', () => {

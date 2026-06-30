@@ -2,6 +2,7 @@ import {
   boolean,
   pgEnum,
   pgTable,
+  text,
   timestamp,
   uuid,
   varchar,
@@ -26,4 +27,13 @@ export const usersTable = pgTable('users', {
   })
     .notNull()
     .defaultNow(),
+});
+
+export const refreshTokens = pgTable('refresh_tokens', {
+  id: uuid().defaultRandom().primaryKey(),
+  userId: uuid().notNull(),
+  tokenHash: text().notNull(),
+  revoked: boolean().default(false).notNull(),
+  expiresAt: timestamp().notNull(),
+  createdAt: timestamp().defaultNow().notNull(),
 });

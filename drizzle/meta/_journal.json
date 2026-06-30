@@ -8,6 +8,13 @@
       "when": 1780755555016,
       "tag": "0000_happy_patch",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1782638393895,
+      "tag": "0001_giant_pretty_boy",
+      "breakpoints": true
     }
   ]
 }
